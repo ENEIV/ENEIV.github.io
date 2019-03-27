@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="635px" height="137px" viewBox="0 0 635 137" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>ENEIV</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="111.745364%" y1="8.41280827%" x2="-3.16307263%" y2="113.689507%" id="linearGradient-1">
+            <stop stop-color="#D06F23" offset="0%"></stop>
+            <stop stop-color="#E5A60E" offset="29.3036776%"></stop>
+            <stop stop-color="#D06F23" offset="100%"></stop>
+        </linearGradient>
+        <text id="text-2" font-family="TimesNewRomanPS-BoldMT, Times New Roman" font-size="200" font-weight="bold" letter-spacing="1.75">
+            <tspan x="16.3769531" y="205">ENEIV</tspan>
+        </text>
+        <filter x="-0.4%" y="-1.1%" width="100.8%" height="102.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="2.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <filter x="-0.4%" y="-1.1%" width="100.8%" height="102.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="2.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-20.000000, -72.000000)">
+            <g id="ENEIV">
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#text-2"></use>
+                <use fill="#E09000" fill-opacity="1" filter="url(#filter-3)" xlink:href="#text-2"></use>
+                <use fill="#E09000" fill-opacity="1" filter="url(#filter-4)" xlink:href="#text-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

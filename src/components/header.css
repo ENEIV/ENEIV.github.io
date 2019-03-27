@@ -1,0 +1,33 @@
+Header {
+  background: #151515;
+  border-bottom: 1px solid #202020;
+  margin: 0 0 0 0.75rem;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.Link {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.ENEIV {
+  color: #fa9917;
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-family: "times new roman";
+}
+
+.Case {
+  border-radius: 0.15em;
+  border: 1px solid #fa9917;
+  padding: 0 0.5rem;
+}
+
+.Logo {
+  display: inline-block;
+  margin: 0;
+  /*font-size: 2rem;*/
+  margin: 0 0.5rem 0 0;
+}

@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'chakra_petchregular';
+    src: url('chakrapetch-regular-webfont.woff2') format('woff2'),
+         url('chakrapetch-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chakra_petch_semiboldregular';
+    src: url('chakrapetch-semibold-webfont.woff2') format('woff2'),
+         url('chakrapetch-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
