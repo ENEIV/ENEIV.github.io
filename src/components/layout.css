@@ -132,10 +132,12 @@ a {
   background-color: transparent;
   vertical-align: middle;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  background-color: royalblue;
 }
 abbr[title] {
   border-bottom: none;
