@@ -1,19 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import "./index.css"
 
 import Layout from "../components/layout"
-//import Loadout from "../components/Loadout"
 import styled from "styled-components"
 import SEO from "../components/seo"
+
 import loadout from "../images/loadout.svg"
 import tools1 from "../images/tools-1.svg"
 import tools2 from "../images/tools-2.svg"
 import tools3 from "../images/tools-3.svg"
+
 import linkedin from "../images/Social/linkedin.png"
 import behance from "../images/Social/behance.png"
 import codepen from "../images/Social/codepen.png"
 import github from "../images/Social/github.png"
-//import loadout from "../images/loadout.png"
 
 
 
@@ -47,9 +48,13 @@ const Card = styled.div`
     text-transform: none;
   }
 `
+
 const DivGrid = styled.div`
   display: inline-block;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.5rem 0.25rem;
+  @media (max-width: 650px) {
+    grid-column: 1/13 !important;
+  }
 `
 const Icons = styled.div`
   margin: 0;
@@ -111,7 +116,7 @@ const IndexPage = () => (
       </Card>
     </DivGrid>
     
-    <DivGrid style={{ gridColumn: `4/8` }}>
+    <DivGrid style={{ gridColumn: `4/8` }} >
     <Card style={{width: `100%`}}>
       <h1>Dev Loadout</h1>
       <Icons>
@@ -132,18 +137,19 @@ const IndexPage = () => (
     </Card>
     </DivGrid>
 
-    <div style={{gridColumn:`8/9`}}>
+  <DivGrid style={{ gridColumn: `8/13`}}>
+    <div className="Logo" >
       <Lines style={{ height: `7rem`, transform: `translate(0, 20vh)`}}/>
       <ENEIV>ENEIV</ENEIV>
     </div>
 
-    <div style={{ gridColumn: `9/12` }}>
+    <div className="Bio" >
       <p style={{fontSize:`1rem`}}>Name: Enudi N. Enuenwosu</p>
       <p style={{fontSize:`1rem`}}>Role: Designer/Developer</p>
       <p style={{fontSize:`1rem`}}>Location: Chicago, IL</p>
     </div>
 
-    <div>
+    <div className="Social" >
       <Lines style={{ height: `12rem`, transform: `translate(0, 17vh)` }} />
       <Socials>
         <li>
@@ -168,6 +174,7 @@ const IndexPage = () => (
         </li>
       </Socials>
     </div>
+  </DivGrid>
 
   </Layout>
 )

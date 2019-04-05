@@ -1,13 +1,16 @@
 import { Link } from "gatsby"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
-import React from "react"
 import styled from "styled-components"
 import "./header.css"
 
-const Menu = styled.div` 
+const MenuBtn = styled.button` 
   display: inline-block;
   vertical-align: middle;
   margin: 0 1rem 0 0.5rem;
+  background-color: unset;
+  cursor: pointer;
+  border: none;
 `
 
 const Bar = styled.div`
@@ -16,68 +19,86 @@ const Bar = styled.div`
   background-color: whitesmoke;
 `
 
-const Display = styled.ul` 
+const MenuItems = styled.ul` 
   margin: 0;
   display: inline-block;
   list-style-type: none;
+  transition: 2;
   li {
     margin: 0 0.65rem;
     display: inline-block;
   }
 `
 
-menuBtn = `true`
-menutItem = `false`
+class Header extends Component {
+  constructor() {
+    super();
 
-const displayMenu = () => {
-  if(menuBtn) {
-    return ( `backgroundColor: royalblue` )
-  } else {
-   return (`backgroundColor: rosybrown`)
+    this.state = {
+      showMenu: false,
+    }
+
+    this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+  }
+
+  showMenu(event) {
+    event.preventDefault();
+
+    this.setState({ showMenu: true }, () => {
+      document.addEventListener(`click`, this.closeMenu);
+    });
+  }
+
+  closeMenu() {
+
+    this.setState({ showMenu: false}, () => {
+      document.removeEventListener(`click`, this.closeMenu);
+    });
+  }
+
+  render () {
+    return (
+        <header>
+          <MenuBtn onClick={this.showMenu}>
+            <Bar style={{ width: `2rem`}} />
+            <Bar style={{ width: `1rem`}} />
+          </MenuBtn>
+
+          <h1 className="Logo">
+            <Link to="/" className="ENEIV">
+              ENEIV
+            </Link>
+          </h1>
+
+          {
+          this.state.showMenu
+            ? (
+              <MenuItems className="menu" ref={(element) => {this.dropdownMenu = element;}}>
+                <li>
+                  <Link to="/page-2/" className="Link">
+                      Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/page-2/" className="Link">
+                      Portfolio
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/page-2/" className="Link">
+                      Contact/Hire
+                  </Link>
+                </li>
+              </MenuItems>
+            ) : (
+              null
+            )
+        }
+          </header>
+    )
   }
 }
-
-const toggleMenu = () => {
-  menuBtn = !menuBtn;
-  menuItems = !menuItems;
-}
-
-const Header = () => (
-  <header>
-      <Menu style={displayMenu} onClick={toggleMenu()}>
-        <Bar style={{ width: `2rem`}} />
-        <Bar style={{ width: `1rem`}} />
-      </Menu>
-
-      <h1 className="Logo">
-        <Link to="/page-2/" className="ENEIV">
-          ENEIV
-        </Link>
-      </h1>
-        <Display>
-          <li>
-            <Link to="/page-2/" className="Link">
-                Services
-            </Link>
-          </li>
-          <li>
-            <Link to="/page-2/" className="Link">
-                Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link to="/page-2/" className="Link">
-                Bio
-            </Link>
-          </li>
-          <li>
-            <Link to="/page-2/" className="Link">
-                Hire
-            </Link>
-          </li>
-        </Display>
-  </header>
-)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

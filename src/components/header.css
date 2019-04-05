@@ -29,3 +29,11 @@ Header {
   /*font-size: 2rem;*/
   margin: 0 0.5rem 0 0;
 }
+
+.itemsVisible {
+  background-color: seagreen;
+}
+
+.itemsInvisible {
+  background-color: rosybrown;
+}

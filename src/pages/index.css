@@ -1,0 +1,16 @@
+
+  @media screen and ( max-width: 650px ) {
+    .Social {
+      grid-column: 9/13 !important;
+      grid-row: 1 !important;
+    }
+
+    .Bio {
+      grid-column: 4/9 !important;
+      grid-row: 1 !important;
+    }
+    .Logo {
+      grid-column: 1/4 !important;
+      grid-row: 1 !important;
+    }
+  }

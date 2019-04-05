@@ -136,8 +136,7 @@ a {
 }
 a:active,
 a:hover {
-  outline-width: 0;
-  background-color: royalblue;
+  /*outline-width: 0*/
 }
 abbr[title] {
   border-bottom: none;
