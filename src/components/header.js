@@ -61,6 +61,7 @@ class Header extends Component {
     return (
         <header>
           <MenuBtn onClick={this.showMenu}>
+            <input type="checkbox" class="toggler"></input>
             <Bar style={{ width: `2rem`}} />
             <Bar style={{ width: `1rem`}} />
           </MenuBtn>
@@ -76,13 +77,8 @@ class Header extends Component {
             ? (
               <MenuItems className="menu" ref={(element) => {this.dropdownMenu = element;}}>
                 <li>
-                  <Link to="/page-2/" className="Link">
+                  <Link to="/services/" className="Link">
                       Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/page-2/" className="Link">
-                      Portfolio
                   </Link>
                 </li>
                 <li>

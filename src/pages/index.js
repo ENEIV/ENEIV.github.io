@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./index.css"
 
 import Layout from "../components/layout"
 import styled from "styled-components"
@@ -33,29 +32,56 @@ const Card = styled.div`
     vertical-align: middle;
   }
   h5 {
-    margin: 0.5rem 0 0 0;
+    margin: 0.5rem 0 0.25rem 0;
     padding: 0 0 0.25rem 0.75rem;
   }
   a {
     text-decoration: none;
   }
-  a:hover {
-    color: #fa9917;
-    font-size: 0.9rem;
-  }
   p {
     font-weight: bold;
     text-transform: none;
   }
-`
-
-const DivGrid = styled.div`
-  display: inline-block;
-  padding: 0.5rem 0.25rem;
-  @media (max-width: 650px) {
-    grid-column: 1/13 !important;
+  span {
+    opacity: 0;
+  }
+  span:hover {
+    opacity: 100;
   }
 `
+
+//
+const InfoSection = styled.section`
+  grid-column: 1/4;
+
+  @media (max-width: 650px) {
+    grid-row: 2 !important;
+    grid-column: 1/13 !important;
+    background-color: royalblue;
+  }
+`
+
+const SkillSection = styled.section`
+  grid-column: 4/8;
+
+  @media (max-width: 650px) {
+    grid-row: 3 !important;
+    grid-column: 1/13 !important;
+    background-color: seagreen !important;
+  }
+`
+
+const PersonaSection = styled.section`
+  grid-column: 8/13;
+
+  @media (max-width: 650px) {
+    grid-row: 1 !important;
+    grid-column: 1/13 !important;
+    background-color: rosybrown !important;
+  }
+`
+
+//
 const Icons = styled.div`
   margin: 0;
   padding: 0 0.5rem 0.5rem;
@@ -68,11 +94,11 @@ const ENEIV = styled.div`
   margin: 0;
   font-size: 3rem;
   font-family: Times New Roman;
-  transform: translate(0, 30vh) rotate(-90deg);
+  transform: translate(0, 50%) rotate(-90deg);
 `
 
 const Lines = styled.div`
-  margin: auto;
+  margin: 0 auto;
   width: 0.075rem;
   background-color: whitesmoke;
 `
@@ -94,7 +120,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`ENEIV`,`portfolio`,`gatsby`, `application`, `react`]} />
 
-    <DivGrid style={{ gridColumn: `1/4` }}>
+    <InfoSection>
       <Card>
         <h1>Brief</h1>
         <p>Enudi N. Enuenwosu is a freelance/contract for hire based in Chicago, IL (the best city ever). He specializes in the creation and implementation of Design /Development Systems to help companies scale efficiently. His most dangerous skillset, his unrelenting pursuit of excellence through knowledge and discipline. 
@@ -102,23 +128,17 @@ const IndexPage = () => (
       </Card>
 
       <Card>
-        <h1>Services</h1>
+        <h1><Link to="/services/">Services</Link></h1>
         <p>These systems serve as a foundation for clients and their businesses. Creating an ecosystem that gives a compelling direction towards their desired outcome and a framework that scales and growes with them.</p>
-          <h5 style={{borderBottom: `1px solid #202020`}}>
-            <Link to="/">Brand Systems</Link>
-          </h5>
-          <h5 style={{borderBottom: `1px solid #202020`}}>
-            <Link to="/">Digital Systems</Link>
-          </h5>
-          <h5>
-            <Link to="/">Print Systems</Link>
-          </h5>
+          <h5 style={{borderBottom: `1px solid #202020`}}>Brand Systems</h5>
+          <h5 style={{borderBottom: `1px solid #202020`}}>Digital Systems</h5>
+          <h5>Print Systems</h5>
       </Card>
-    </DivGrid>
+    </InfoSection>
     
-    <DivGrid style={{ gridColumn: `4/8` }} >
+    <SkillSection>
     <Card style={{width: `100%`}}>
-      <h1>Dev Loadout</h1>
+      <h1>Current Dev Loadout</h1>
       <Icons>
         <img src={loadout} alt="development stack"/>
       </Icons>
@@ -135,9 +155,9 @@ const IndexPage = () => (
         <img src={tools3} alt="frontend tools"/>
       </Icons>
     </Card>
-    </DivGrid>
+    </SkillSection>
 
-  <DivGrid style={{ gridColumn: `8/13`}}>
+    <PersonaSection>
     <div className="Logo" >
       <Lines style={{ height: `7rem`, transform: `translate(0, 20vh)`}}/>
       <ENEIV>ENEIV</ENEIV>
@@ -174,7 +194,7 @@ const IndexPage = () => (
         </li>
       </Socials>
     </div>
-  </DivGrid>
+  </PersonaSection>
 
   </Layout>
 )

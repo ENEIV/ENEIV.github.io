@@ -16,19 +16,23 @@ import "./layout.css"
 
 const Grid = styled.main`
   display: grid;
-  height: 90vh;
+  height: 100%;
+  padding: 0 0.5rem;
   grid-template-columns: repeat(12, 1fr);
+  column-gap: 0.5rem;
 `
 const Outro = styled.footer` 
   display: block;
-  alignItems: center;
-  textAlign: center;
-  fontSize: 0.85rem;
-  color: grey;
+  align-items: center;
   text-align: center;
   font-size: 0.85rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0.5rem;
+  color: grey;
   a {
     color: darkgrey;
+    text-decoration: underline;
   }
 `
 
@@ -53,7 +57,6 @@ const Layout = ({ children }) => (
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Outro>
-
       </>
     )}
   />

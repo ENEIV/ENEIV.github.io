@@ -1,8 +1,7 @@
 
   @media screen and ( max-width: 650px ) {
     .Social {
-      grid-column: 9/13 !important;
-      grid-row: 1 !important;
+      
     }
 
     .Bio {

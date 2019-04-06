@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -136,7 +136,7 @@ a {
 }
 a:active,
 a:hover {
-  /*outline-width: 0*/
+  outline-width: 0;
 }
 abbr[title] {
   border-bottom: none;
@@ -512,6 +512,11 @@ li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 
+section {
+  padding: 0.5rem 0;
+  overflow-y: scroll;
+}
+
 /*
 code {
   font-size: 0.85rem;
@@ -600,12 +605,8 @@ pre tt:after {
 
 @media only screen and (min-width: 768px) {
   html {
-    font: 14px/1em 'chakra petch', serif;
+    font: 16px/1em 'chakra petch', serif;
   }
-  
- /* p {
-    font-size: 0.65rem;
-  } */
 }
 
 @media screen and (min-width: 2560px) {
