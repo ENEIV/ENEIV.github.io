@@ -16,19 +16,17 @@ import "./layout.css"
 
 const Grid = styled.main`
   display: grid;
-  height: 100%;
+  min-height: 88vh;
   padding: 0 0.5rem;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 0.5rem;
 `
 const Outro = styled.footer` 
   display: block;
-  align-items: center;
   text-align: center;
   font-size: 0.85rem;
   width: 100%;
-  position: fixed;
-  bottom: 0.5rem;
+  max-height: 5vh;
   color: grey;
   a {
     color: darkgrey;

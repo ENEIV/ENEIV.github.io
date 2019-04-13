@@ -603,14 +603,59 @@ pre tt:after {
   }
 }
 
+@media only screen and (min-width: 200px) {
+  html {
+    font: 10px/1em 'chakra petch', monospace, sans-serif;
+  }
+  .Intel {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  html {
+    font: 14px/1em 'chakra petch', monospace, sans-serif;
+  }
+  .Intel {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .Intel {
+    font-size: 0.85rem !important;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   html {
-    font: 16px/1em 'chakra petch', serif;
+    font: 12px/1em 'chakra petch', monospace, sans-serif;
+  }
+  .Intel {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    overflow-y: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font: 14px/1em 'chakra petch', monospace, sans-serif;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font: 18px/1em 'chakra petch', monospace, sans-serif;
   }
 }
 
 @media screen and (min-width: 2560px) {
   html {
-    font: 30px/1em 'chakra petch', serif;
+    font: 30px/1em 'chakra petch', monospace, sans-serif;
   }
 }

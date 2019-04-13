@@ -4,10 +4,24 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import "./header.css"
 
+import ENEIV_Au from "../images/ENEIV-Au.svg"
+
+
+const ENEIV = styled.img`
+  height: 7vh;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    align-self: center;
+  }
+`
 const MenuBtn = styled.button` 
   display: inline-block;
   vertical-align: middle;
-  margin: 0 1rem 0 0.5rem;
+  margin: 0 0.25rem 0 0.5rem;
   background-color: unset;
   cursor: pointer;
   border: none;
@@ -21,12 +35,29 @@ const Bar = styled.div`
 
 const MenuItems = styled.ul` 
   margin: 0;
+  height: 100%;
   display: inline-block;
   list-style-type: none;
-  transition: 2;
   li {
+    height: 100%;
     margin: 0 0.65rem;
     display: inline-block;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    display: block;
+    margin: 0 0 1.5rem;
+    
+    li {
+      display: block;
+      padding: 0.5rem;
+    }
+
+    a {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
   }
 `
 
@@ -61,29 +92,28 @@ class Header extends Component {
     return (
         <header>
           <MenuBtn onClick={this.showMenu}>
-            <input type="checkbox" class="toggler"></input>
             <Bar style={{ width: `2rem`}} />
             <Bar style={{ width: `1rem`}} />
           </MenuBtn>
 
-          <h1 className="Logo">
-            <Link to="/" className="ENEIV">
-              ENEIV
-            </Link>
-          </h1>
-
+          <ENEIV src={ENEIV_Au} />
+          
           {
-          this.state.showMenu
-            ? (
+          this.state.showMenu ? (
               <MenuItems className="menu" ref={(element) => {this.dropdownMenu = element;}}>
+                <li>
+                  <Link to="/" className="Link">
+                      Home
+                  </Link>
+                </li>
                 <li>
                   <Link to="/services/" className="Link">
                       Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/page-2/" className="Link">
-                      Contact/Hire
+                  <Link to="/contact/" className="Link">
+                      Contacts
                   </Link>
                 </li>
               </MenuItems>
