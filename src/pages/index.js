@@ -14,9 +14,9 @@ import linkedin from "../images/Social/linkedin.png"
 import behance from "../images/Social/behance.png"
 import github from "../images/Social/github.png"
 
-import persona from "../images/persona.png"
+import Persona_Space from "../images/Persona-Space.svg"
 import ENEIV_Ag from "../images/ENEIV-Ag.svg"
-import Seal from "../images/ENEIV-Seal.png"
+import Seal from "../images/Persona-Tiger.svg"
 
 
 
@@ -210,7 +210,7 @@ const IndexPage = () => (
     </Logo>
 
     <Bio>
-      <Persona src={persona} />
+      <Persona src={Persona_Space} />
       <div>
         <Tigre src={Seal} />
         <Intel>

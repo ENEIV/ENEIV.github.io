@@ -96,8 +96,10 @@ class Header extends Component {
             <Bar style={{ width: `1rem`}} />
           </MenuBtn>
 
+            <Link to="/">
           <ENEIV src={ENEIV_Au} />
-          
+            </Link>
+
           {
           this.state.showMenu ? (
               <MenuItems className="menu" ref={(element) => {this.dropdownMenu = element;}}>

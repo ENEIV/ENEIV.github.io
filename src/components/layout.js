@@ -51,7 +51,7 @@ const Layout = ({ children }) => (
 
           <Grid>{children}</Grid>
         <Outro>
-          © ENEIV {new Date().getFullYear()}, Built with
+          © V.2.0.0 ENEIV {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Outro>

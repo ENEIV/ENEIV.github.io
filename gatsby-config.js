@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `ENEIV`,
-    description: `Hello My name is Enudi. This is my personal site, it contains all my projects and services I offer as well as information about me. Feel free to reach out so we can chat!`,
+    description: `Hello My name is Enudi. This is my personal site, it contains all my projects and services I offer, as well as information about me. Feel free to reach out so we can chat!`,
     author: `@eneiv`,
   },
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#303030`,
         theme_color: `#303030`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/Persona-Icon.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

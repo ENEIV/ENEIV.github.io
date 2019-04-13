@@ -8,9 +8,9 @@ import linkedin from "../images/Social/linkedin.png"
 import behance from "../images/Social/behance.png"
 import github from "../images/Social/github.png"
 
-import persona from "../images/persona.png"
+import Persona_Space from "../images/Persona-Space.svg"
 import ENEIV_Ag from "../images/ENEIV-Ag.svg"
-import Seal from "../images/ENEIV-Seal.png"
+import Seal from "../images/Persona-Tiger.svg"
 
 const Display = styled.h1`
 font-size: 5rem;
@@ -129,7 +129,7 @@ const PersonaSection = styled.section`
     `
 
   const Persona = styled.img`
-    width: 90%;
+    width: 100%;
     margin: auto;
     border: 1px solid #303030;
     display: inline-block;
@@ -164,7 +164,7 @@ const ServicePage = () => (
       <Card>
         <h1>Contact</h1>
         <p>
-          The Brand System is designed to construct or reinvisions a brand's persona and how this persona is voiced to the marketplace and its consumers. This system allows a business to turn a group of ideas into a solid concentrated framework.
+         Hello My name is Enudi. This is my personal site, it contains all my projects and services I offer, as well as information about me. Feel free to reach out so we can chat!
         </p>
         <h6>Service Inquiry: EEnuenwosu@gmail.com</h6>
         <h6>Designs: Behance </h6>
@@ -178,7 +178,7 @@ const ServicePage = () => (
       </Logo>
 
       <Bio>
-        <Persona src={persona} />
+        <Persona src={Persona_Space} />
         <div>
           <Tigre src={Seal} />
           <Intel>
