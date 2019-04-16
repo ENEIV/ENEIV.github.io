@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import styled from "styled-components"
-import "./fonts/fonts.css"
+import "./Font/styles.css"
 import "./layout.css"
 
 const Grid = styled.main`
