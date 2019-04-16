@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import "./header.css"
 
 import ENEIV_Au from "../images/ENEIV-Au.svg"
 
