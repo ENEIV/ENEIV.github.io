@@ -164,9 +164,9 @@ const ServicePage = () => (
       <Card>
         <h1>Contact</h1>
         <p>
-         Hello My name is Enudi. This is my personal site, it contains all my projects and services I offer, as well as information about me. Feel free to reach out so we can chat!
+         Thank you for visiting my portfolio website. I update my site periodically with new projects and info about myself so feel free to stop by again anytime! I would love to talk and answer any questions you might have you can reach me through these channels, thanks for stopping by!
         </p>
-        <h6>Service Inquiry: EEnuenwosu@gmail.com</h6>
+        <h6>Services Inquiry: EEnuenwosu@gmail.com</h6>
         <h6>Designs: Behance </h6>
         <h6>Code: Github + Codesandbox</h6>
       </Card>

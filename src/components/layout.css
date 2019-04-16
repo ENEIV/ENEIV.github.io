@@ -609,6 +609,7 @@ pre tt:after {
   }
   .Intel {
     font-size: 1rem !important;
+    line-height: normal;
   }
 }
 
@@ -618,12 +619,14 @@ pre tt:after {
   }
   .Intel {
     font-size: 0.75rem !important;
+    line-height: normal;
   }
 }
 
 @media only screen and (min-width: 425px) {
   .Intel {
     font-size: 0.85rem !important;
+    line-height: normal;
   }
 }
 
@@ -633,6 +636,7 @@ pre tt:after {
   }
   .Intel {
     font-size: 0.85rem !important;
+    line-height: normal;
   }
 }
 
